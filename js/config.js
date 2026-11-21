@@ -40,11 +40,5 @@ window.CURSOS = [
     nome: "Ouvinte na palestra de Manejo CatFriendly",
     inst: "Universidade Anhanguera",
     cert: "certs/palestra-catfriendly.jpg"
-  },
-   {
-    data: "Abril de 2024",
-    nome: "Curso de Auxiliar de Animais de Pequeno Porte.",
-    inst: "Udemy Alumni",
-    cert: ""
   }
 ];

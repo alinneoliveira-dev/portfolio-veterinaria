@@ -26,7 +26,3 @@ O projeto foi desenvolvido com o objetivo de apresentar sua trajetória acadêmi
 - `js/config.js` — Centralização dos dados de contato, links e cursos.
 - `js/main.js` — Lógica das interações e funcionalidades da interface.
 - `img/` — Recursos visuais e imagens utilizadas no projeto.
-
-## Objetivo do projeto
-
-Entregar uma apresentação digital que valorize a trajetória acadêmica da estudante, facilite o acesso às suas informações e proporcione uma experiência de navegação consistente em diferentes dispositivos.

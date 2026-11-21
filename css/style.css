@@ -135,6 +135,8 @@ nav a:hover { color: var(--fg); border-color: var(--sand); }
 .tl h3 { font-size: 1.9rem; margin-top: .35rem; }
 .tl .what { font-weight: 500; margin-top: .3rem; }
 .tl .desc { color: var(--muted); margin-top: .6rem; max-width: 34rem; }
+.desc { margin: 18px 0 0; padding-left: 20px; color: #627782; font-size: 1rem; line-height: 1.8;}
+.desc li {padding-left: 5px; margin-bottom: 7px;}
 .tl .tag { display: inline-block; margin-top: .9rem; }
 .tl .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; max-width: 26rem; }
 .tl .shots figure { margin: 0; }
@@ -369,4 +371,206 @@ footer b { color: var(--sand); padding-inline: .2rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .card, .hero-photo { transform: none; }
+}
+
+
+/* Ajustes de leitura — experiências e conteúdo de reabilitação */
+.tl .desc {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: .96rem;
+  line-height: 1.7;
+  list-style: disc;
+}
+.tl .desc > li {
+  padding-left: .25rem;
+  margin: 0 0 .65rem;
+}
+.tl .desc > li:last-child { margin-bottom: 0; }
+.tl .desc ul {
+  margin: .55rem 0 .2rem;
+  padding-left: 1.25rem;
+  list-style: circle;
+}
+.tl .desc ul li {
+  padding-left: .2rem;
+  margin: .25rem 0;
+}
+.tl .shots { align-self: start; }
+.modal-list { gap: .85rem; }
+.modal-list div { padding: 1.1rem 1.25rem; }
+.modal-list b { margin-bottom: .25rem; }
+.modal-list span { display: block; line-height: 1.6; }
+.course-story {
+  margin-top: .5rem;
+  padding: 1.35rem 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--sage) 28%, var(--line));
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(24,60,58,.045);
+}
+.course-story-label,
+.course-story-date {
+  display: block;
+  color: var(--sage-text);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.course-story p {
+  margin-top: .75rem;
+  max-width: none;
+  line-height: 1.7;
+}
+.course-story p strong { color: var(--fg); }
+.course-story-date {
+  margin-top: 1rem;
+  color: var(--sand);
+  letter-spacing: .07em;
+}
+@media (max-width: 899px) {
+  .tl .desc { max-width: none; }
+  .course-story { padding: 1.15rem; }
+}
+
+
+/* Fisioterapia e reabilitação — composição editorial e galeria responsiva */
+.reab {
+  display: grid;
+  gap: 2rem;
+}
+.reab-intro {
+  max-width: 54rem;
+  display: grid;
+  gap: 1rem;
+}
+.reab-intro .eyebrow { margin: 0; }
+.reab-intro blockquote {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.08;
+}
+.reab-intro p {
+  max-width: 48rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.reab-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  align-items: stretch;
+}
+.reab-image {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--sage-soft);
+}
+.reab-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+.reab-image:hover img { transform: scale(1.035); }
+.reab-image-feature img { object-position: center 48%; }
+.reab-image:nth-child(2) img { object-position: center 54%; }
+.reab-image:nth-child(3) img { object-position: center 50%; }
+.reab-image:nth-child(4) img { object-position: center 42%; }
+.reab-image figcaption {
+  padding: .7rem .9rem .8rem;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+@media (min-width: 700px) {
+  .reab-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .reab-image img { aspect-ratio: 4 / 3; min-height: 0; }
+}
+@media (min-width: 1000px) {
+  .reab { gap: 2.4rem; }
+  .reab-gallery { gap: 1.1rem; }
+  .reab-image { border-radius: 24px; }
+}
+@media (max-width: 420px) {
+  .reab-gallery { gap: .6rem; }
+  .reab-image { border-radius: 15px; }
+  .reab-image img { min-height: 9.5rem; }
+  .reab-image figcaption { padding: .55rem .65rem .65rem; font-size: .72rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reab-image img { transition: none; }
+}
+
+/* Curso prático IBRAVET — destaque da formação em reabilitação */
+.ibravet {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.4rem, 3.5vw, 2.5rem);
+  border: 1px solid color-mix(in srgb, var(--sage) 35%, var(--line));
+  border-radius: 28px;
+  background: var(--bg);
+  box-shadow: 0 14px 38px rgba(24, 60, 58, .055);
+}
+.ibravet-head { display: grid; gap: .7rem; max-width: 46rem; }
+.ibravet-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sage-text);
+}
+.ibravet h3 {
+  font-size: clamp(2rem, 4.2vw, 2.9rem);
+  line-height: 1.08;
+}
+.ibravet-head p { margin: 0; color: var(--muted); line-height: 1.75; }
+.ibravet-head p strong { color: var(--fg); font-weight: 600; }
+.ibravet-tech {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ibravet-tech li {
+  display: grid;
+  gap: .2rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--sand);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.ibravet-tech b { font-family: var(--serif); font-size: 1.2rem; line-height: 1.2; color: var(--fg); }
+.ibravet-tech span { font-size: .88rem; line-height: 1.55; color: var(--muted); }
+.ibravet-close {
+  margin: 0;
+  padding: 1.1rem 1.3rem;
+  border-radius: 16px;
+  background: var(--sage-soft);
+  line-height: 1.7;
+}
+@media (min-width: 700px) {
+  .ibravet-tech { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 420px) {
+  .ibravet { padding: 1.15rem; border-radius: 22px; }
+}
+@media (min-width: 1000px) {
+  .ibravet { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); column-gap: 3rem; align-items: center; }
+  .ibravet-head { grid-column: 1; grid-row: 1; }
+  .ibravet-tech { grid-column: 2; grid-row: 1; }
+  .ibravet-close { grid-column: 1 / -1; }
 }
